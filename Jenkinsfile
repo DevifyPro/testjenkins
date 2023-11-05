@@ -6,7 +6,7 @@ node {
     docker.image('bitnami/php-fpm:latest').inside("-e COMPOSER_HOME=/tmp/jenkins-workspace") {
 
       stage("Prepare folders") {
-        sh "mkdir /tmp/jenkins-workspace"
+        sh "mkdir -p /tmp/jenkins-workspace"
       }
 
       stage("Get Composer") {
